@@ -1,4 +1,5 @@
 import React, {Component} from "react";
+import axios from 'axios';
 
 class Body extends Component{
     constructor(props){
@@ -6,6 +7,18 @@ class Body extends Component{
         this.state = {
             count: 0
         }
+    }
+
+    componentDidMount(){
+        //axios api call
+        axios.get('https://xkcd.com/info.0.json')
+        .then(function (response) {
+            // handle success
+            console.log(response);
+        })
+        .catch(function (error) {
+            console.log(error);
+        })
     }
 
     componentDidUpdate(prevProps, prevState){
