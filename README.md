@@ -1,5 +1,6 @@
 # react_demo_spring_24
-
+-Heather Smith-
+(gitpod.io/#)
 props -> variables passed from parents to child
     body component -> carousel component
     children cannot pass props to parents
