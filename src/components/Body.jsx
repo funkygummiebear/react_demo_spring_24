@@ -12,7 +12,7 @@ class Body extends Component{
 
     componentDidMount(){
         //axios api call
-        axios.get('https://random-data-api.com/api/coffee/random_coffee')
+        axios.get(' "https://api.nasa.gov/planetary/apod?api_key=AHUAZIZ071wHOqoKAVXMcEiiEUWCmk5g2w1xk2th";')
         .then((response) => {
             this.setState({coffee: response.data})
         })

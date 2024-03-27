@@ -8,6 +8,7 @@ import ErrorNotFound from './components/ErrorNotFound';
 import Body from './components/Body';
 import BodyHooks from './components/BodyHooks';
 import IndexRoute from './components/IndexRoute';
+import { BrowserRouter } from 'react-router-dom';
 
 const router = createBrowserRouter([
   {
@@ -34,7 +35,9 @@ const router = createBrowserRouter([
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <RouterProvider router={router} />
+    <BrowserRouter>
+        <App />
+    </BrowserRouter>
   </React.StrictMode>
 );
 
