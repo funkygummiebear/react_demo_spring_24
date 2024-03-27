@@ -10,39 +10,14 @@ class Body extends Component{
         }
     }
 
-    componentDidMount(){
-        //axios api call
-        axios.get(' "https://api.nasa.gov/planetary/apod?api_key=AHUAZIZ071wHOqoKAVXMcEiiEUWCmk5g2w1xk2th";')
-        .then((response) => {
-            this.setState({coffee: response.data})
-        })
-        .catch(function (error) {
-            console.log(error);
-        })
-    }
-
+    
     // componentDidUpdate(prevProps, prevState) {
     //     console.log(prevState)
     //     console.log(this.state)
     //     //function
     // }
 
-    render(){
-        const {coffee} = this.state
-        const increment = () => {
-            this.setState({count: this.state.count + 1})
-        }
-        return(
-            <div>
-            <button type="button" className="btn btn-dark" onClick={increment}>
-                {this.state.count}
-            </button>
-            <p>
-            {coffee.blend_name}
-            </p>
-            </div> 
-            )
-    }
+    
 }
 
 export default Body
